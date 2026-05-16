@@ -1,0 +1,52 @@
+title: IceBarPlus
+email: icebarplus@example.com
+description: >-
+  一个基于 Manifest V3 构建的强大的 Microsoft Edge 浏览器安全测试工具
+baseurl: ""
+url: "https://mzt20130220.github.io"
+github_username: mzt20130220
+
+permalink: /:title/
+
+markdown: kramdown
+highlighter: rouge
+timezone: Asia/Shanghai
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: IceBarPlus Team
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+feed:
+  path: atom.xml
